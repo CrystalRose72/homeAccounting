@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Домашняя Бухгалтерия</string>
+    <string name="summa">Сумма</string>
+    <string name="exit">Выход</string>
+    <string-array name="months">
+        <item>Выберите месяц</item>
+        <item>Январь</item>
+        <item>Февраль</item>
+        <item>Март</item>
+        <item>Апрель</item>
+        <item>Май</item>
+        <item>Июнь</item>
+        <item>Июль</item>
+        <item>Август</item>
+        <item>Сентябрь</item>
+        <item>Октябрь</item>
+        <item>Ноябрь</item>
+        <item>Декабрь</item>
+    </string-array>
+    <string-array name="categories_income">
+        <item>Выберите категорию</item>
+        <item>Зарплата</item>
+        <item>Стипендия</item>
+        <item>Подарок</item>
+        <item>Пенсия</item>
+        <item>Карманные расходы</item>
+        <item>Другое</item>
+    </string-array>
+    <string-array name="categories_expenses">
+        <item>Выберите категорию</item>
+        <item>Еда</item>
+        <item>Проезд</item>
+        <item>Налоги</item>
+        <item>Комуннальные услуги</item>
+        <item>Красота</item>
+        <item>Здоровье</item>
+        <item>Одежда и аксессуары</item>
+        <item>Дом</item>
+        <item>Машина</item>
+        <item>Другое</item>
+    </string-array>
+    <string-array name="vid">
+        <item>Выберите вид</item>
+        <item>Доход</item>
+        <item>Расход</item>
+    </string-array>
+</resources>

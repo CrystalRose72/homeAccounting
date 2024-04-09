@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinancialAnalysis">
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/light_indigo"
+        android:text="Фильтр"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerMonth"
+        style="@style/Widget.AppCompat.Spinner"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        android:spinnerMode="dialog"
+        android:textAlignment="textStart"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/grafIncome"
+        style="@style/TextViewStyle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:background="@color/indigo"
+        android:backgroundTint="@color/indigo"
+        android:text="--------------------"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/grafIncome2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/grafIncome2"
+        app:layout_constraintTop_toBottomOf="@+id/grafIncome2" />
+
+    <!--    <Button-->
+<!--        android:id="@+id/buttonSerch"-->
+<!--        android:layout_width="137dp"-->
+<!--        android:layout_height="39dp"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="Применить"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/spinnerMonth"-->
+<!--        app:layout_constraintHorizontal_bias="0.496"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/spinnerMonth"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/spinnerMonth" />-->
+
+    <TextView
+        android:id="@+id/grafIncome2"
+        style="@style/TextViewStyle1"
+        android:layout_width="0dp"
+        android:layout_height="22dp"
+        android:layout_marginBottom="330dp"
+        android:background="@color/indigo"
+        android:backgroundTint="@color/indigo"
+        android:text="--------------------"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/Income"
+        style="@style/TextViewStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="text"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textIncome"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="@+id/textIncome"
+        app:layout_constraintTop_toBottomOf="@+id/textIncome" />
+
+    <TextView
+        android:id="@+id/Expenses"
+        style="@style/TextViewStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="text"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/textExpense"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="@+id/textExpense"
+        app:layout_constraintTop_toBottomOf="@+id/textExpense" />
+
+    <TextView
+        android:id="@+id/textIncome"
+        style="@style/TextViewStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="Доходы"
+        android:textColor="@color/text2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/grafIncome2"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textExpense"
+        style="@style/TextViewStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="6dp"
+        android:text="Расходы"
+        android:textColor="@color/text2"
+        android:textColorHighlight="@color/text2"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/grafIncome"
+        app:layout_constraintEnd_toEndOf="@+id/textIncome"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textIncome"
+        app:layout_constraintTop_toTopOf="@+id/Income" />
+
+    <TextView
+        android:id="@+id/Statistics"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/text1"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/grafIncome"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/grafIncome"
+        app:layout_constraintTop_toBottomOf="@+id/grafIncome" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSerch"
+        android:layout_width="137dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Поиск"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16dp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerMonth"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@color/light_indigo"
+        android:text="Анализ финансов"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerMonth"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/spinnerMonth"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSerch" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="19dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="413dp"
+        android:text="0%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="19dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="346dp"
+        android:text="0%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="27dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="346dp"
+        android:text="50%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="42dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="346dp"
+        android:text="100%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="30dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="411dp"
+        android:text="50%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:fontFamily="@font/montserrat_regular"
+        android:layout_width="38dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="412dp"
+        android:text="100%"
+        android:textColor="@color/text1"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="5dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="400dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="397dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="397dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="331dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="331dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="90dp"
+        android:layout_marginBottom="331dp"
+        android:text="|"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/light_indigo"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="Дата"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        app:circularflow_radiusInDP="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:freezesText="false"
+        android:text="Всего средств"
+        android:textColor="@color/text2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+    <TextView
+        android:id="@+id/TotalFunds"
+        style="@style/TextViewStyle1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTintMode="add"
+        android:text="0"
+        android:textAlignment="center"
+        app:fontFamily="@font/montserrat_medium"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:freezesText="false"
+        android:text="Доходы"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/TotalFunds" />
+
+
+    <TextView
+        android:id="@+id/TextIncome"
+        style="@style/TextViewStyle1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/TextViewStyle2"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="20dp"
+        android:text="Расходы"
+        app:layout_constraintEnd_toEndOf="@+id/textView1"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textView1"
+        app:layout_constraintTop_toBottomOf="@+id/TextIncome" />
+
+    <TextView
+        android:id="@+id/textExpenses"
+        style="@style/TextViewStyle1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_plus"
+        android:layout_width="104dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="@color/indigo"
+        android:fadeScrollbars="false"
+        android:fontFamily="@font/montserrat_semibold"
+        android:onClick="onClickPlus"
+
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textExpenses"
+        app:layout_constraintVertical_bias="0.078" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_minus"
+        android:layout_width="104dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="@color/light_indigo"
+        android:fontFamily="@font/montserrat_semibold"
+        android:onClick="onClickMinus"
+        android:text="-"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/text1"
+        android:textSize="16sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toEndOf="@+id/button_plus"
+        app:layout_constraintTop_toBottomOf="@+id/textExpenses"
+        app:layout_constraintVertical_bias="0.077"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@color/light_indigo"
+        android:divider="@drawable/separator"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.998">
+        <!--        android:background="@color/pink">-->
+
+        <Button
+            android:id="@+id/buttonAnalysis"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="102dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClickAnalysis"
+            android:text="Анализ"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/text1" />
+
+        <Button
+            android:id="@+id/buttonHistory"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="onClickHistory"
+            android:text="История"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/text1" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityExpenses">
+
+    <TextView
+        android:id="@+id/errors12"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#FD0000"
+        style="@style/TextViewStyle2"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerMonth"
+        app:layout_constraintStart_toStartOf="@+id/spinnerMonth"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerMonth" />
+
+    <EditText
+        android:id="@+id/editTextSumma1"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="Сумма"
+        android:imeOptions="actionNext"
+        android:inputType="numberDecimal"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/buttonActivityExpenses"-->
+<!--        style="@style/Widget.Material3.Button.OutlinedButton.Icon"-->
+<!--        android:layout_width="118dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:shadowColor="#E91E63"-->
+<!--        android:text="добавить"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#E91E63"-->
+<!--        android:textSize="14sp"-->
+<!--        app:cornerRadius="25dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/errors12"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/errors12"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/errors12"-->
+<!--        app:layout_constraintVertical_bias="0.15"-->
+<!--        app:rippleColor="#E91E63"-->
+<!--        app:strokeColor="#E91E63" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonActivityExpenses"
+        android:layout_width="150dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="131dp"
+        android:text="Добавить"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errors12" />
+
+    <Spinner
+        android:id="@+id/spinnerMonth"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerCategories"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/spinnerCategories"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategories" />
+
+    <Spinner
+        android:id="@+id/spinnerCategories"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toEndOf="@+id/editTextSumma1"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextSumma1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSumma1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
